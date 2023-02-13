@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagenes</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Galeria de Imagenes</h1>
+        <div class="image-container">
+            <div class="image">
+                <img src="images/cultivar-tulipanes-02a-a.jpg.webp" alt="">
+            </div>
+            <div class="image">
+                <img src="images/cultivar-tulipanes-05a-a.jpg.webp" alt="">
+            </div>
+            <div class="image">
+                <img src="images/detalle-de-tulipanes-en-flores-rojas-primavera-dos-plantas-jardín-floreciente-con-pétalos-y-tallos-ligeramente-abiertas-fondo-213629553.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="images/download.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="images/photo-1610444028404-09d616461e8e.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="images/photo-1619413013070-48f6d295590a.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="images/cultivar-tulipanes-02a-a.jpg.webp" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
